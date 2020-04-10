@@ -20,5 +20,16 @@
   "dependencies": {},
   "devDependencies": {
     "mocha": "^7.1.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkar1707/json-edit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omkar1707/json-edit/issues"
+  },
+  "homepage": "https://github.com/omkar1707/json-edit#readme"
 }
