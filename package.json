@@ -1,0 +1,24 @@
+{
+  "name": "@json-edit/json-edit",
+  "version": "1.0.0",
+  "title": "JSON Edit",
+  "description": "This module give you ability to manipulate JSON Object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "json",
+    "edit",
+    "delete",
+    "update",
+    "modify",
+    "in-memory"
+  ],
+  "author": "Onkar Kore",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
