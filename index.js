@@ -1,4 +1,4 @@
-async function deleteNode(json, keyToDelete, isRecursive = true) {
+async function deleteNode(json, keyToDelete, isRecursive = true, isDeleteKeyStartsWith = false) {
     const keys = Object.keys(json);
     keys.forEach(function (key) {
         const value = json[key];
@@ -30,8 +30,14 @@ async function deleteNode(json, keyToDelete, isRecursive = true) {
             }
         }
 
-        if (key === keyToDelete) {
-            delete json[key]
+        if (isDeleteKeyStartsWith) {
+            if (key.toLowerCase().startsWith(keyToDelete.toLowerCase())) {
+                delete json[key]
+            }
+        } else {
+            if (key === keyToDelete) {
+                delete json[key]
+            }
         }
     });
 }

@@ -5,9 +5,8 @@ This module give you ability to manipulate JSON Object.
 - Delete json node (recursive/non-recursive/)
 - Delete json node nested inside array
 - Replace key with new value
-
-**TODO:**
 - Delete json node (key contains given vale)
+
 
 **Install**
 ```
