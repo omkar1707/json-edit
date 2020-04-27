@@ -262,3 +262,47 @@ describe('Replace Nested Node with Node', function () {
         assert.deepStrictEqual(input, output);
     });
 });
+
+
+describe('Delete Top Level Starts With', function () {
+    const input = {
+        abcd: 1,
+        b: 2,
+        c: 3
+    };
+    const output = {
+        b: 2,
+        c: 3
+    };
+    it('should match', function () {
+        jsonEdit.deleteNode(input, 'ab', false, true);
+        assert.deepStrictEqual(input, output);
+    });
+});
+
+describe('Delete Nested Level Starts With', function () {
+    const input = {
+        a: 1,
+        b: 2,
+        c: {
+            d: 3,
+            e: 4,
+            f: {
+                gbcd: 5
+            }
+        }
+    };
+    const output = {
+        a: 1,
+        b: 2,
+        c: {
+            d: 3,
+            e: 4,
+            f: {}
+        }
+    };
+    it('should match', function () {
+        jsonEdit.deleteNode(input, 'gB', true, true);
+        assert.deepStrictEqual(input, output);
+    });
+});

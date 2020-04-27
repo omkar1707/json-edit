@@ -11,7 +11,7 @@ async function deleteNode(json, keyToDelete, isRecursive = true, isDeleteKeyStar
 
         if (isRecursive && !isArray && isObject && Object.keys(value).length) {
             if (key !== keyToDelete) {
-                return deleteNode(value, keyToDelete, isRecursive);
+                return deleteNode(value, keyToDelete, isRecursive, isDeleteKeyStartsWith);
             }
         }
 
@@ -25,7 +25,7 @@ async function deleteNode(json, keyToDelete, isRecursive = true, isDeleteKeyStar
                     type === '[object Array]'
                 );
                 if (isRecursive && !isArray && isObject) {
-                    return deleteNode(insideValue, keyToDelete, isRecursive);
+                    return deleteNode(insideValue, keyToDelete, isRecursive, isDeleteKeyStartsWith);
                 }
             }
         }
