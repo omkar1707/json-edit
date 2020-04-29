@@ -1,6 +1,6 @@
 {
   "name": "@json-edit/json-edit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "JSON Edit",
   "description": "This module give you ability to manipulate JSON Object.",
   "main": "index.js",

@@ -28,3 +28,8 @@ jsonEdit.deleteNode(json, keyToDelete, isRecursive = true);
 ```
 jsonEdit.replaceValue(json, keyToReplace, newValue);
 ```
+
+3. Delete Value in nested array
+```
+jsonEdit.deleteValueInStringArray(json, keyToMatch, valueToDelete);
+```
